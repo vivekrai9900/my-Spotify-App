@@ -1,7 +1,8 @@
-import { View, Text, StyleSheet, SafeAreaView, ActivityIndicator } from 'react-native'
+import { View, Text, StyleSheet, SafeAreaView, ActivityIndicator, StatusBar } from 'react-native'
 import React, { useEffect, useState }  from 'react'
 
 import {setupPlayer, addTrack } from '../musicPlayerService'
+import MusicPlayer from './screens/MusicPlayer'
 
 export default function App() {
 
@@ -31,8 +32,10 @@ export default function App() {
   }
   
   return (
-    <View>
-      <Text>App</Text>
+    <View style={styles.container}>
+      <StatusBar barStyle='light-content'/>
+      <MusicPlayer/>
+      
     </View>
   )
 }
